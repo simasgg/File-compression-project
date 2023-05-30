@@ -1,0 +1,27 @@
+.ttip{
+     -fx-background-radius: 0 0 0 0;
+     -fx-background-color:	green;
+     -fx-text-fill: black;
+     -fx-font-size: 10pt ;
+}
+
+.ttip2{
+     -fx-background-radius: 0 0 0 0;
+     -fx-background-color:	yellow;
+     -fx-text-fill: black;
+     -fx-font-size: 10pt ;
+}
+
+.ttip3{
+     -fx-background-radius: 0 0 0 0;
+     -fx-background-color:	red;
+     -fx-text-fill: black;
+     -fx-font-size: 10pt ;
+}
+
+.ttip4{
+     -fx-background-radius: 0 0 0 0;
+     -fx-background-color:	lawngreen;
+     -fx-text-fill: black;
+     -fx-font-size: 10pt ;
+}
