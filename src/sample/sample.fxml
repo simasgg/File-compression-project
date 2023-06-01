@@ -8,15 +8,15 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <top>
       <MenuBar fx:id="myMenuBar" BorderPane.alignment="CENTER">
          <menus>
-            <Menu fx:id="how_to" mnemonicParsing="false" text="Help">
+            <Menu fx:id="how_to" mnemonicParsing="false" text="%help">
                <items>
-                  <MenuItem mnemonicParsing="false" onAction="#menuPressed" text="How to use" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuPressed" text="%how_to_use" />
                </items></Menu>
-            <Menu mnemonicParsing="false" text="Language">
+            <Menu mnemonicParsing="false" text="%language">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#menu_en" text="English">
                      <graphic>
@@ -31,9 +31,9 @@
                   <ImageView fx:id="image_menu" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
             </Menu>
-            <Menu mnemonicParsing="false" text="About">
+            <Menu mnemonicParsing="false" text="%about">
                <items>
-                  <MenuItem mnemonicParsing="false" onAction="#onDialog" text="About" />
+                  <MenuItem mnemonicParsing="false" onAction="#onDialog" text="%about_program" />
                </items>
             </Menu>
          </menus>
@@ -49,17 +49,17 @@
                         <Insets left="15.0" top="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Button fx:id="choose" mnemonicParsing="false" onAction="#toChooseFile" text="Select">
+                  <Button fx:id="choose" mnemonicParsing="false" onAction="#toChooseFile" text="%select">
                      <HBox.margin>
                         <Insets left="10.0" top="7.0" />
                      </HBox.margin>
                   </Button>
-                  <Label text="Selected file:">
+                  <Label text="%selected_file">
                      <HBox.margin>
                         <Insets left="15.0" top="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Label fx:id="file_name" text="_file_name_">
+                  <Label fx:id="file_name" text="%file_name">
                      <HBox.margin>
                         <Insets left="10.0" top="10.0" />
                      </HBox.margin>
@@ -67,12 +67,12 @@
                         <Font name="System Italic" size="12.0" />
                      </font>
                   </Label>
-                  <Label text="Original size:">
+                  <Label text="%original_size">
                      <HBox.margin>
                         <Insets left="10.0" top="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Label fx:id="file_size" text="_size_">
+                  <Label fx:id="file_size" text="%size">
                      <HBox.margin>
                         <Insets left="10.0" top="10.0" />
                      </HBox.margin>
@@ -82,19 +82,19 @@
                   </Label>
                </children>
             </HBox>
-            <TitledPane fx:id="tilted1" animated="false" disable="true" text="Huffman Coding">
+            <TitledPane fx:id="tilted1" animated="false" disable="true" text="%huffman_coding">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="40.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="14.0" layoutY="12.0" text="Code-word length" />
+                        <Label layoutX="14.0" layoutY="12.0" text="%code_word_length" />
                         <ChoiceBox fx:id="choice1" layoutX="130.0" layoutY="8.0" prefWidth="40.0" />
                         <Circle fx:id="circle1" fill="WHITE" layoutX="690.0" layoutY="20.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
                         <Label disable="true" layoutX="687.0" layoutY="12.0" text="?">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font></Label>
-                        <Label layoutX="300.0" layoutY="12.0" text="Compression" />
-                        <Label layoutX="490.0" layoutY="12.0" text="Decompression" />
+                        <Label layoutX="300.0" layoutY="12.0" text="%compression" />
+                        <Label layoutX="490.0" layoutY="12.0" text="%decompression" />
                         <ImageView fx:id="comp_huff" fitHeight="30.0" fitWidth="30.0" layoutX="388.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" visible="false" />
                         <ImageView fx:id="decomp_huff" fitHeight="30.0" fitWidth="30.0" layoutX="580.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" visible="false" />
                         <Label fx:id="time_huff" layoutX="425.0" layoutY="12.0" />
@@ -106,9 +106,9 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="40.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="14.0" layoutY="12.0" text="Offset size" />
+                        <Label layoutX="14.0" layoutY="12.0" text="%offset_size" />
                         <ChoiceBox fx:id="choice2" layoutX="80.0" layoutY="8.0" prefWidth="40.0" />
-                        <Label layoutX="140.0" layoutY="12.0" text="Match length size" />
+                        <Label layoutX="140.0" layoutY="12.0" text="%match_length_size" />
                         <ChoiceBox fx:id="choice2_2" layoutX="245.0" layoutY="8.0" prefWidth="40.0" />
                         <Circle fx:id="circle2" fill="WHITE" layoutX="690.0" layoutY="20.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
                         <Label disable="true" layoutX="687.0" layoutY="12.0" text="?">
@@ -116,8 +116,8 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="300.0" layoutY="12.0" text="Compression" />
-                        <Label layoutX="490.0" layoutY="15.0" text="Decompression" />
+                        <Label layoutX="300.0" layoutY="12.0" text="%compression" />
+                        <Label layoutX="490.0" layoutY="15.0" text="%decompression" />
                         <ImageView fx:id="comp_lz77" fitHeight="30.0" fitWidth="30.0" layoutX="388.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" visible="false" />
                         <ImageView fx:id="decomp_lz77" fitHeight="30.0" fitWidth="30.0" layoutX="580.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" visible="false" />
                         <Label fx:id="time_lz77" layoutX="425.0" layoutY="12.0" />
@@ -129,7 +129,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="40.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="14.0" layoutY="12.0" text="Table size (2^value)" />
+                        <Label layoutX="14.0" layoutY="12.0" text="%table_size" />
                         <ChoiceBox fx:id="choice3" layoutX="130.0" layoutY="8.0" prefWidth="40.0" />
                         <Circle fx:id="circle3" fill="WHITE" layoutX="690.0" layoutY="20.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
                         <Label disable="true" layoutX="687.0" layoutY="12.0" text="?">
@@ -137,8 +137,8 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="300.0" layoutY="12.0" text="Compression" />
-                        <Label layoutX="490.0" layoutY="15.0" text="Decompression" />
+                        <Label layoutX="300.0" layoutY="12.0" text="%compression" />
+                        <Label layoutX="490.0" layoutY="15.0" text="%decompression" />
                         <ImageView fx:id="comp_lz78" fitHeight="30.0" fitWidth="30.0" layoutX="388.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" visible="false" />
                         <ImageView fx:id="decomp_lz78" fitHeight="30.0" fitWidth="30.0" layoutX="580.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" visible="false" />
                         <Label fx:id="time_lz78" layoutX="425.0" layoutY="12.0" />
@@ -150,7 +150,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="40.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="14.0" layoutY="12.0" text="Table size (2^value)" />
+                        <Label layoutX="14.0" layoutY="12.0" text="%table_size" />
                         <ChoiceBox fx:id="choice4" layoutX="130.0" layoutY="8.0" prefWidth="40.0" />
                         <Circle fx:id="circle4" fill="WHITE" layoutX="690.0" layoutY="20.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
                         <Label disable="true" layoutX="687.0" layoutY="12.0" text="?">
@@ -158,8 +158,8 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="300.0" layoutY="12.0" text="Compression" />
-                        <Label layoutX="490.0" layoutY="12.0" text="Decompression" />
+                        <Label layoutX="300.0" layoutY="12.0" text="%compression" />
+                        <Label layoutX="490.0" layoutY="12.0" text="%decompression" />
                         <ImageView fx:id="comp_lzw" fitHeight="30.0" fitWidth="30.0" layoutX="388.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" visible="false" />
                         <ImageView fx:id="decomp_lzw" fitHeight="30.0" fitWidth="30.0" layoutX="580.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" visible="false" />
                         <Label fx:id="time_lzw" layoutX="425.0" layoutY="12.0" />
@@ -167,11 +167,11 @@
                      </children></AnchorPane>
                </content>
             </TitledPane>
-            <TitledPane fx:id="tilted5" animated="false" disable="true" text="Move-to-front transform">
+            <TitledPane fx:id="tilted5" animated="false" disable="true" text="%mtf_transform">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="40.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="14.0" layoutY="12.0" text="Length" />
+                        <Label layoutX="14.0" layoutY="12.0" text="%length" />
                         <ChoiceBox fx:id="choice5" layoutX="60.0" layoutY="8.0" prefWidth="40.0" />
                         <Circle fx:id="circle5" fill="WHITE" layoutX="690.0" layoutY="20.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
                         <Label disable="true" layoutX="687.0" layoutY="12.0" text="?">
@@ -179,24 +179,24 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="300.0" layoutY="12.0" text="Compression" />
-                        <Label layoutX="490.0" layoutY="14.0" text="Decompression" />
+                        <Label layoutX="300.0" layoutY="12.0" text="%compression" />
+                        <Label layoutX="490.0" layoutY="14.0" text="%decompression" />
                         <ImageView fx:id="comp_mtf" fitHeight="30.0" fitWidth="30.0" layoutX="388.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" visible="false" />
                         <ImageView fx:id="decomp_mtf" fitHeight="30.0" fitWidth="30.0" layoutX="580.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" visible="false" />
                         <Label fx:id="time_mtf" layoutX="425.0" layoutY="12.0" />
                         <Label fx:id="dtime_mtf" layoutX="612.0" layoutY="12.0" />
                         <ChoiceBox fx:id="choice5_2" layoutX="140.0" layoutY="8.0" prefWidth="40.0" />
                         <ChoiceBox fx:id="choice5_3" layoutX="250.0" layoutY="8.0" prefWidth="40.0" />
-                        <Label layoutX="110.0" layoutY="12.0" text="VLC" />
-                        <Label layoutX="190.0" layoutY="12.0" text="Threshold" />
+                        <Label layoutX="110.0" layoutY="12.0" text="%vlc" />
+                        <Label layoutX="190.0" layoutY="12.0" text="%threshold" />
                      </children></AnchorPane>
                </content>
             </TitledPane>
-            <TitledPane fx:id="tilted6" animated="false" disable="true" text="Interval coding">
+            <TitledPane fx:id="tilted6" animated="false" disable="true" text="%interval_coding">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="40.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="14.0" layoutY="12.0" text="Length" />
+                        <Label layoutX="14.0" layoutY="12.0" text="%length" />
                         <ChoiceBox fx:id="choice6" layoutX="60.0" layoutY="8.0" prefWidth="40.0" />
                         <Circle fx:id="circle6" fill="WHITE" layoutX="690.0" layoutY="20.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
                         <Label disable="true" layoutX="687.0" layoutY="12.0" text="?">
@@ -204,22 +204,22 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="300.0" layoutY="12.0" text="Compression" />
-                        <Label layoutX="490.0" layoutY="14.0" text="Decompression" />
+                        <Label layoutX="300.0" layoutY="12.0" text="%compression" />
+                        <Label layoutX="490.0" layoutY="14.0" text="%decompression" />
                         <ImageView fx:id="comp_interval" fitHeight="30.0" fitWidth="30.0" layoutX="388.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" visible="false" />
                         <ImageView fx:id="decomp_interval" fitHeight="30.0" fitWidth="30.0" layoutX="580.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" visible="false" />
                         <Label fx:id="time_interval" layoutX="425.0" layoutY="12.0" />
                         <Label fx:id="dtime_interval" layoutX="612.0" layoutY="12.0" />
                         <ChoiceBox fx:id="choice6_2" layoutX="180.0" layoutY="8.0" prefWidth="70.0" />
-                        <Label layoutX="150.0" layoutY="12.0" text="VLC" />
+                        <Label layoutX="150.0" layoutY="12.0" text="%vlc" />
                      </children></AnchorPane>
                </content>
             </TitledPane>
-            <TitledPane fx:id="tilted7" animated="false" disable="true" text="Run-length encoding">
+            <TitledPane fx:id="tilted7" animated="false" disable="true" text="%rlc">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="40.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="14.0" layoutY="12.0" text="Length" />
+                        <Label layoutX="14.0" layoutY="12.0" text="%length" />
                         <ChoiceBox fx:id="choice7" layoutX="60.0" layoutY="8.0" prefWidth="40.0" />
                         <Circle fx:id="circle7" fill="WHITE" layoutX="690.0" layoutY="20.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
                         <Label disable="true" layoutX="687.0" layoutY="12.0" text="?">
@@ -227,25 +227,25 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="300.0" layoutY="12.0" text="Compression" />
-                        <Label layoutX="490.0" layoutY="14.0" text="Decompression" />
+                        <Label layoutX="300.0" layoutY="12.0" text="%compression" />
+                        <Label layoutX="490.0" layoutY="14.0" text="%decompression" />
                         <ImageView fx:id="comp_rle" fitHeight="30.0" fitWidth="30.0" layoutX="388.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" visible="false" />
                         <ImageView fx:id="decomp_rle" fitHeight="30.0" fitWidth="30.0" layoutX="580.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" visible="false" />
                         <Label fx:id="time_rle" layoutX="425.0" layoutY="12.0" />
                         <Label fx:id="dtime_rle" layoutX="612.0" layoutY="12.0" />
                         <ChoiceBox fx:id="choice7_2" layoutX="180.0" layoutY="8.0" prefWidth="70.0" />
-                        <Label layoutX="150.0" layoutY="12.0" text="VLC" />
+                        <Label layoutX="150.0" layoutY="12.0" text="%vlc" />
                      </children></AnchorPane>
                </content>
             </TitledPane>
             <HBox prefHeight="40.0" prefWidth="200.0">
                <children>
                   <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="Force stop" visible="false" />
-                  <Button fx:id="reset" mnemonicParsing="false" onAction="#onReset" prefHeight="30.0" prefWidth="100.0" text="Reset">
+                  <Button fx:id="reset" mnemonicParsing="false" onAction="#onReset" prefHeight="30.0" prefWidth="100.0" text="%reset">
                      <HBox.margin>
                         <Insets left="400.0" right="20.0" />
                      </HBox.margin></Button>
-                  <Button fx:id="start" mnemonicParsing="false" onAction="#onStart" prefHeight="30.0" prefWidth="100.0" text="Start" />
+                  <Button fx:id="start" mnemonicParsing="false" onAction="#onStart" prefHeight="30.0" prefWidth="100.0" text="%start" />
                </children>
             </HBox>
          </children>
@@ -257,44 +257,44 @@
    <right>
       <AnchorPane BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="35.0" layoutY="108.0" text="Compressed to: " />
-            <Label fx:id="data_huff" alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="125.0" prefWidth="85.0" text="no data">
+            <Label layoutX="35.0" layoutY="108.0" text="%compressed_to" />
+            <Label fx:id="data_huff" alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="125.0" prefWidth="85.0" text="%no_data">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="35.0" layoutY="195.0" text="Compressed to: " />
-            <Label fx:id="data_lz77" alignment="CENTER" layoutX="35.0" layoutY="210.0" prefWidth="85.0" text="no data">
+            <Label layoutX="35.0" layoutY="195.0" text="%compressed_to" />
+            <Label fx:id="data_lz77" alignment="CENTER" layoutX="35.0" layoutY="210.0" prefWidth="85.0" text="%no_data">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="35.0" layoutY="280.0" text="Compressed to: " />
-            <Label fx:id="data_lz78" alignment="CENTER" layoutX="35.0" layoutY="295.0" prefWidth="85.0" text="no data">
+            <Label layoutX="35.0" layoutY="280.0" text="%compressed_to" />
+            <Label fx:id="data_lz78" alignment="CENTER" layoutX="35.0" layoutY="295.0" prefWidth="85.0" text="%no_data">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="35.0" layoutY="367.0" text="Compressed to: " />
-            <Label fx:id="data_lzw" alignment="CENTER" layoutX="35.0" layoutY="385.0" prefWidth="85.0" text="no data">
+            <Label layoutX="35.0" layoutY="367.0" text="%compressed_to" />
+            <Label fx:id="data_lzw" alignment="CENTER" layoutX="35.0" layoutY="385.0" prefWidth="85.0" text="%no_data">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="35.0" layoutY="455.0" text="Compressed to: " />
-            <Label fx:id="data_mtf" alignment="CENTER" layoutX="35.0" layoutY="470.0" prefWidth="90.0" text="no data">
+            <Label layoutX="35.0" layoutY="455.0" text="%compressed_to" />
+            <Label fx:id="data_mtf" alignment="CENTER" layoutX="35.0" layoutY="470.0" prefWidth="90.0" text="%no_data">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="35.0" layoutY="543.0" text="Compressed to: " />
-            <Label fx:id="data_interval" alignment="CENTER" layoutX="35.0" layoutY="560.0" prefWidth="90.0" text="no data">
+            <Label layoutX="35.0" layoutY="543.0" text="%compressed_to" />
+            <Label fx:id="data_interval" alignment="CENTER" layoutX="35.0" layoutY="560.0" prefWidth="90.0" text="%no_data">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="35.0" layoutY="631.0" text="Compressed to: " />
-            <Label fx:id="data_rle" alignment="CENTER" layoutX="35.0" layoutY="650.0" prefWidth="90.0" text="no data">
+            <Label layoutX="35.0" layoutY="631.0" text="%compressed_to" />
+            <Label fx:id="data_rle" alignment="CENTER" layoutX="35.0" layoutY="650.0" prefWidth="90.0" text="%no_data">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -326,7 +326,7 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </CheckBox>
-            <Label text="Select all">
+            <Label text="%select_all">
                <VBox.margin>
                   <Insets left="-15.0" top="-65.0" />
                </VBox.margin>
@@ -338,7 +338,7 @@
       </VBox>
    </left>
    <bottom>
-      <Label fx:id="my_status" text="status">
+      <Label fx:id="my_status" text="%status">
          <BorderPane.margin>
             <Insets bottom="10.0" left="20.0" />
          </BorderPane.margin>

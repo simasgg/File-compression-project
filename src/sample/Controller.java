@@ -27,6 +27,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.text.DecimalFormat;
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
@@ -34,7 +35,6 @@ import java.util.ResourceBundle;
 import java.util.stream.IntStream;
 
 public class Controller implements Initializable {
-
     public TitledPane tilted1, tilted2, tilted3, tilted4, tilted5, tilted6, tilted7;
     public Circle circle1, circle2, circle3, circle4, circle5, circle6, circle7;
     public ImageView comp_huff, comp_lz77, comp_lz78, comp_lzw, comp_mtf, comp_interval, comp_rle;
@@ -55,9 +55,6 @@ public class Controller implements Initializable {
     public String absolute_path=null, absolute_name;
     public Label data_huff, data_lz77, data_lz78, data_lzw, data_mtf, data_interval, data_rle;
 
-
-
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -73,9 +70,13 @@ public class Controller implements Initializable {
         // set english flag in menu
         Image image_british_flag = new Image("images/uk_square.png");
         english.setImage(image_british_flag);
-        image_menu.setImage(image_british_flag);
         Image image_lithuanian_flag = new Image("images/lithuania_square.png");
         lithuanian.setImage(image_lithuanian_flag);
+
+        if (resourceBundle.getLocale().toString().equals("lt_lt"))
+            image_menu.setImage(image_lithuanian_flag);
+        else
+            image_menu.setImage(image_british_flag);
 
         // create tooltip for info icons
         Tooltip tooltip = new Tooltip("Time Complexity: Very fast\n\n"+
@@ -807,11 +808,35 @@ public class Controller implements Initializable {
     public void menu_en(ActionEvent actionEvent) {
         Image image_british_flag = new Image("images/uk_square.png");
         image_menu.setImage(image_british_flag);
+
+        Locale locale = new Locale("en_LT");
+        ResourceBundle bundle = ResourceBundle.getBundle("resources.translations", locale);
+        try {
+            Parent test = FXMLLoader.load(getClass().getResource("sample.fxml"), bundle);
+            Scene sceneHelp = new Scene(test, 1000, 850);
+            Stage window = (Stage) myMenuBar.getScene().getWindow();
+            window.setScene(sceneHelp);
+            window.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void menu_lt(ActionEvent actionEvent) {
         Image image_lithuanian_flag = new Image("images/lithuania_square.png");
         image_menu.setImage(image_lithuanian_flag);
+
+        Locale locale = new Locale("lt_LT");
+        ResourceBundle bundle = ResourceBundle.getBundle("resources.translations", locale);
+        try {
+            Parent test = FXMLLoader.load(getClass().getResource("sample.fxml"), bundle);
+            Scene sceneHelp = new Scene(test, 1000, 850);
+            Stage window = (Stage) myMenuBar.getScene().getWindow();
+            window.setScene(sceneHelp);
+            window.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
